@@ -49,7 +49,7 @@ class Task:
         print("self.model", self.model)
         self.model = self.model.to(self.params.device)
 
-        self.optimizer = self.make_optimizer()
+        self.optimizer = self.make_optimizer(self.model)
         self.criterion = self.make_criterion()
         self.test_metrics = [AccuracyMetric(), TestLossMetric(self.criterion)]
         self.set_input_shape()
