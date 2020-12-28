@@ -51,7 +51,8 @@ class Task:
 
         self.optimizer = self.make_optimizer(self.model)
         self.criterion = self.make_criterion()
-        self.test_metrics = [AccuracyMetric(), TestLossMetric(self.criterion)]
+        self.metrics = [AccuracyMetric(), TestLossMetric(self.criterion)]
+        
         self.set_input_shape()
 
     def load_data(self) -> None:
