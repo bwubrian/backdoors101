@@ -44,7 +44,7 @@ class Task:
 
     def init_task(self):
         self.load_data()
-        self.build_model()
+        self.model = self.build_model()
         self.resume_model()
         print("self.model", self.model)
         self.model = self.model.to(self.params.device)
