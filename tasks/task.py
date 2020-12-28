@@ -46,6 +46,7 @@ class Task:
         self.load_data()
         self.build_model()
         self.resume_model()
+        print("self.model", self.model)
         self.model = self.model.to(self.params.device)
 
         self.optimizer = self.make_optimizer()
