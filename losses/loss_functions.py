@@ -49,7 +49,7 @@ def compute_all_losses_and_grads(loss_tasks, attack, model, criterion,
         elif t == 'mask_norm':
             loss_values[t], grads[t] = norm_loss(attack.params, model,
                                                  grads=compute_grad)
-        elif t == 'nc':
+        elif t == 'neural_cleanse':
             loss_values[t], grads[t] = compute_normal_loss(attack.params,
                                                            model,
                                                            criterion,
